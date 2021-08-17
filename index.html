@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parrallax Scrolling</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="#" class="logo"><img src="LogoMakr-7HYRJN (1).png"></a>
+
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+
+    <div class="sec" id="sec">
+        <h2>Parrallax Scrolling Effect</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea praesentium porro nihil vitae culpa sunt error dolores ut debitis tempora omnis eaque necessitatibus, quis fuga consequatur sequi eum autem amet. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Laboriosam totam molestias ea quam nesciunt repellendus nostrum vitae eaque vel exercitationem! Ad et amet possimus mollitia animi rem debitis a. Unde?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic eligendi
+            harum cumque, rem ad quas voluptatibus impedit, nesciunt veritatis quis inventore architecto animi debitis facere quos cum illo odio ratione? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore cumque, tempore commodi omnis excepturi
+            odio sequi hic quam nemo optio.<br><br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nostrum cupiditate fuga. Doloribus esse deserunt neque veritatis ipsa nihil recusandae similique eum amet unde vero aliquam hic corrupti
+            reiciendis tenetur facere ea eaque dolorem laboriosam saepe dolores rerum quis, maiores nam. At excepturi officiis officia labore sint neque veniam reprehenderit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolore cum blanditiis
+            nisi commodi reiciendis neque? Harum ipsa quo cupiditate quis debitis quos excepturi? Repellendus amet fuga nihil fugit nobis atque accusamus voluptate id quos commodi! Voluptatum, deserunt dolor? Unde ipsam praesentium, quas minus odit enim
+            perspiciatis quam neque molestiae.<br><br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex inventore minima nam facere odit, dicta dignissimos unde provident omnis fugiat adipisci quasi, sapiente animi, natus assumenda alias.
+            Laboriosam animi quam doloribus totam eligendi adipisci vel odio non eaque nisi consectetur vero dolore ullam voluptatibus, quod ducimus est recusandae facilis. Illo, numquam omnis esse magnam odit quibusdam, nam harum nemo quod vero, aspernatur
+            corrupti delectus voluptas molestiae ipsam temporibus mollitia distinctio in exercitationem? Iste consectetur pariatur vitae. Rerum tempore necessitatibus odit explicabo quam corrupti rem corporis architecto maxime temporibus commodi atque
+            suscipit facilis exercitationem et perspiciatis, impedit excepturi ipsam reprehenderit. Id.<br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quas nobis quibusdam quia! Animi perspiciatis doloremque aut, alias ad aliquam
+            tempora sed neque, rem quasi eveniet voluptatibus sunt, autem harum magni? Vitae doloremque sit quam dolores sed iste ducimus, debitis cum neque ipsum a veritatis eligendi similique quis quibusdam quae nam ut! Voluptatem, eaque laborum! Praesentium,
+            tempora pariatur veniam nulla ducimus accusantium rerum maxime quia blanditiis qui illum quisquam nobis perferendis repellendus aperiam nam recusandae, esse enim quidem sed ullam omnis? Iure officiis dicta cupiditate. Facere accusamus dignissimos
+            quia earum officia debitis atque architecto culpa enim excepturi, ducimus eos dicta numquam tempore vel ex incidunt iste quaerat ullam optio harum quis molestiae. Animi exercitationem, quo mollitia eveniet omnis laborum molestias quaerat minus
+            cupiditate ullam ad dignissimos maiores incidunt, dolores ipsum, nostrum similique voluptatem qui illum magni? Dolor quaerat debitis aliquam. Ea at sit pariatur, modi magni non voluptas reiciendis aspernatur dolor impedit sequi accusamus inventore
+            tempora, suscipit sapiente fugit nam, nobis eos blanditiis ipsum atque dolorem ad. Atque officiis laborum obcaecati, blanditiis sint laboriosam error ea ipsa optio, maxime libero, quos velit consectetur veniam et incidunt magni! Vitae, eaque
+            dolorem voluptatem, aliquid dignissimos deleniti hic excepturi ut, fugit expedita quae.
+
+
+
+
+        </p>
+
+    </div>
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 0.8 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
